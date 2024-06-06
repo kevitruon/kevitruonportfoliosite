@@ -26,7 +26,7 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <div className="bg-gray-900 text-white py-12">
+    <div className="bg-gray-900 text-white py-12" id="Contact">
       <div className="max-w-lg mx-auto">
         <h2 className="text-3xl font-bold mb-6">Contact Me</h2>
         <p className="text-lg mb-8">Let's chat! Send me an e-mail.</p>
