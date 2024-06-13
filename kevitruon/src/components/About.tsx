@@ -5,11 +5,10 @@ const About: React.FC = () => {
     <div className="max-w-4xl mx-auto py-16 px-4 sm:px-6 lg:px-8" id="About">
       <h1 className="text-4xl font-bold mb-8">About</h1>
       <div>
-        <h2 className="text-2xl font-semibold mb-4">Work Experience</h2>
         <div>
-          <h3 className="text-2xl font-semibold mb-4">Education</h3>
+          <h2 className="text-2xl font-semibold mb-4">Education</h2>
           <div className="mb-6">
-            <h4 className="text-lg font-semibold">2023-2024</h4>
+            <h3 className="text-lg font-semibold">2023-2024</h3>
             <p className="text-gray-700">
               Hack Reactor (Galvanize) - Advance Software Engineering Certificate
               <br />
@@ -23,7 +22,7 @@ const About: React.FC = () => {
             </p>
           </div>
           <div>
-            <h4 className="text-lg font-semibold">2020-2023</h4>
+            <h3 className="text-lg font-semibold">2020-2023</h3>
             <p className="text-gray-700">
               UC Santa Cruz - Computer Science: Game Design
               <br />
