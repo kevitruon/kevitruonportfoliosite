@@ -35,7 +35,7 @@ const About: React.FC = () => {
           </div>
           <div className="text-center mt-12">
 <a
-            href="https://drive.google.com/file/d/1a0HkPt7o8huH0teJ2JKWuWO-JmYSBqeh/view?usp=drive_link"
+            href="https://drive.google.com/file/d/1YPjf-_R9F4iY50T0_L0qkeW5Ihh3t6wc/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className={`inline-block ${theme === 'dark' ? 'bg-primary text-white' : 'bg-accent text-white'} font-semibold py-3 px-8 rounded-full transition duration-300`}
