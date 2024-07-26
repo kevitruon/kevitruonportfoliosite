@@ -1,26 +1,27 @@
 import React from 'react';
-import './App.css';
+import { ThemeProvider } from './ThemeContext';
 import Navbar from './components/Navbar';
-import Footer from './components/Footer';
+import Hero from './components/Hero';
 import About from './components/About';
 import Skills from './components/Skills';
 import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
-import Hero from './components/Hero';
+import Footer from './components/Footer';
 
-function App() {
-  return (
-    <div>
-
-      <Navbar />
-      <Hero />
-      <About />
-      <Skills />
-      <Portfolio />
-      <Contact />
-      <Footer />
-    </div>
-  );
-}
+const App: React.FC = () => {
+    return (
+        <ThemeProvider>
+            <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
+                <Navbar />
+                <Hero />
+                <About />
+                <Skills />
+                <Portfolio />
+                <Contact />
+                <Footer />
+            </div>
+        </ThemeProvider>
+    );
+};
 
 export default App;
