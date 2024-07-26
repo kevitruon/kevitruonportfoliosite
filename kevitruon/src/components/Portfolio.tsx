@@ -9,19 +9,19 @@ const Portfolio: React.FC = () => {
       title: "FitConnect - Social Media Workout Tracker",
       description: "A social media workout tracker built with React, FastAPI, and PostgreSQL.",
       image: require("../assets/fitconnect.png"),
-      repoLink: "https://github.com/your-repo-link"
+      repoLink: "https://github.com/kevitruon/FitConnect"
     },
     {
       title: "CarCar Dealership - Car Dealership Management Application",
       description: "A car dealership management application built with React, Django, and PostgreSQL.",
-      image: "https://via.placeholder.com/600x400",
-      repoLink: "https://github.com/your-repo-link"
+      image: require("../assets/carcardealership.png"),
+      repoLink: "https://github.com/kevitruon/CarCarDealership"
     },
     {
-      title: "Project 3",
-      description: "A brief description of Project 3.",
-      image: "https://via.placeholder.com/600x400",
-      repoLink: "https://github.com/your-repo-link"
+      title: "Computer Graphics",
+      description: "Rendered 3D Models using Three.js, WebGL, and HTML",
+      image: require("../assets/computergraphics.png"),
+      repoLink: "https://github.com/kevitruon/ComputerGraphics-WebGL"
     }
   ];
 

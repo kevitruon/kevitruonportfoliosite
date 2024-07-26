@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useTheme } from '../ThemeContext';
+import emailjs from 'emailjs-com';
 
 const Contact: React.FC = () => {
     const [name, setName] = useState('');
@@ -13,14 +14,23 @@ const Contact: React.FC = () => {
         e.preventDefault();
         setIsSubmitting(true);
 
-        // Simulate form submission
-        await new Promise(resolve => setTimeout(resolve, 2000));
-
-        setSubmitStatus('success');
-        setName('');
-        setEmail('');
-        setMessage('');
-        setIsSubmitting(false);
+        try {
+            await emailjs.sendForm(
+                process.env.REACT_APP_EMAILJS_SERVICE_ID!,
+                process.env.REACT_APP_EMAILJS_TEMPLATE_ID!,
+                e.target as HTMLFormElement,
+                process.env.REACT_APP_EMAILJS_USER_ID!
+            );
+            setSubmitStatus('success');
+            setName('');
+            setEmail('');
+            setMessage('');
+        } catch (error) {
+            console.error('EmailJS error:', error);
+            setSubmitStatus('error');
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     return (
@@ -34,6 +44,7 @@ const Contact: React.FC = () => {
                             <input
                                 type="text"
                                 id="name"
+                                name="name" // Important for EmailJS
                                 value={name}
                                 onChange={(e) => setName(e.target.value)}
                                 className={`mt-1 block w-full rounded-md ${theme === 'dark' ? 'bg-gray-600 text-white' : 'bg-gray-100 text-gray-900'} border-transparent focus:border-primary focus:bg-white focus:ring-0`}
@@ -45,6 +56,7 @@ const Contact: React.FC = () => {
                             <input
                                 type="email"
                                 id="email"
+                                name="email" // Important for EmailJS
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
                                 className={`mt-1 block w-full rounded-md ${theme === 'dark' ? 'bg-gray-600 text-white' : 'bg-gray-100 text-gray-900'} border-transparent focus:border-primary focus:bg-white focus:ring-0`}
@@ -55,6 +67,7 @@ const Contact: React.FC = () => {
                             <label htmlFor="message" className={`block text-sm font-medium ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>Message</label>
                             <textarea
                                 id="message"
+                                name="message" // Important for EmailJS
                                 value={message}
                                 onChange={(e) => setMessage(e.target.value)}
                                 rows={4}
