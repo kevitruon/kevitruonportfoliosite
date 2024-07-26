@@ -8,7 +8,7 @@ const Portfolio: React.FC = () => {
     {
       title: "FitConnect - Social Media Workout Tracker",
       description: "A social media workout tracker built with React, FastAPI, and PostgreSQL.",
-      image: "https://via.placeholder.com/600x400",
+      image: require("../assets/fitconnect.png"),
       repoLink: "https://github.com/your-repo-link"
     },
     {

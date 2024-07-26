@@ -24,8 +24,8 @@ const Hero: React.FC = () => {
                 <div className="md:w-1/2 flex justify-center animate-fade-in-up animation-delay-900">
                     <div className="w-64 h-64 bg-white rounded-full overflow-hidden border-4 border-white shadow-xl hover:scale-105 transition duration-300">
                         <img
-                            src="https://via.placeholder.com/256"
-                            alt="Your Name"
+                            src= {require("../assets/profilepicture.jpeg")}
+                            alt="Kevin Truong"
                             className="w-full h-full object-cover"
                         />
                     </div>
