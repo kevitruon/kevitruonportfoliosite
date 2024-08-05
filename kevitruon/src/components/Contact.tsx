@@ -34,9 +34,11 @@ const Contact: React.FC = () => {
     };
 
     return (
-        <div className={`py-20 ${theme === 'dark' ? 'bg-gray-800' : 'bg-background'}`} id="Contact">
+        <div className={`min-h-screen py-20 ${theme === 'dark' ? 'bg-gray-800' : 'bg-gray-100'}`} id="Contact">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 className={`text-3xl font-bold text-center mb-12 ${theme === 'dark' ? 'text-white' : 'text-primary'}`}>Contact Me</h2>
+                <h2 className={`text-3xl font-bold text-center mb-12 ${
+            theme === "dark" ? "text-white" : "text-primary"
+          }`}>Contact Me</h2>
                 <div className={`${theme === 'dark' ? 'bg-gray-700' : 'bg-white'} shadow-lg rounded-lg p-8`}>
                     <form onSubmit={handleSubmit} className="space-y-6">
                         <div>
@@ -44,10 +46,10 @@ const Contact: React.FC = () => {
                             <input
                                 type="text"
                                 id="name"
-                                name="name" // Important for EmailJS
+                                name="name"
                                 value={name}
                                 onChange={(e) => setName(e.target.value)}
-                                className={`mt-1 block w-full rounded-md ${theme === 'dark' ? 'bg-gray-600 text-white' : 'bg-gray-100 text-gray-900'} border-transparent focus:border-primary focus:bg-white focus:ring-0`}
+                                className={`mt-1 block w-full rounded-md ${theme === 'dark' ? 'bg-gray-600 text-white' : 'bg-gray-100 text-gray-900'} border border-transparent focus:border-primary focus:ring-primary focus:ring-opacity-50`}
                                 required
                             />
                         </div>
@@ -56,10 +58,10 @@ const Contact: React.FC = () => {
                             <input
                                 type="email"
                                 id="email"
-                                name="email" // Important for EmailJS
+                                name="email"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
-                                className={`mt-1 block w-full rounded-md ${theme === 'dark' ? 'bg-gray-600 text-white' : 'bg-gray-100 text-gray-900'} border-transparent focus:border-primary focus:bg-white focus:ring-0`}
+                                className={`mt-1 block w-full rounded-md ${theme === 'dark' ? 'bg-gray-600 text-white' : 'bg-gray-100 text-gray-900'} border border-transparent focus:border-primary focus:ring-primary focus:ring-opacity-50`}
                                 required
                             />
                         </div>
@@ -67,11 +69,11 @@ const Contact: React.FC = () => {
                             <label htmlFor="message" className={`block text-sm font-medium ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>Message</label>
                             <textarea
                                 id="message"
-                                name="message" // Important for EmailJS
+                                name="message"
                                 value={message}
                                 onChange={(e) => setMessage(e.target.value)}
                                 rows={4}
-                                className={`mt-1 block w-full rounded-md ${theme === 'dark' ? 'bg-gray-600 text-white' : 'bg-gray-100 text-gray-900'} border-transparent focus:border-primary focus:bg-white focus:ring-0`}
+                                className={`mt-1 block w-full rounded-md ${theme === 'dark' ? 'bg-gray-600 text-white' : 'bg-gray-100 text-gray-900'} border border-transparent focus:border-primary focus:ring-primary focus:ring-opacity-50`}
                                 required
                             ></textarea>
                         </div>
@@ -79,9 +81,7 @@ const Contact: React.FC = () => {
                             <button
                                 type="submit"
                                 disabled={isSubmitting}
-                                className={`w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white ${theme === 'dark' ? 'bg-primary hover:bg-primary-dark' : 'bg-accent hover:bg-accent-dark'} focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary ${
-                                    isSubmitting ? 'opacity-50 cursor-not-allowed' : ''
-                                }`}
+                                className={`w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white ${theme === 'dark' ? 'bg-primary hover:bg-primary-dark' : 'bg-accent hover:bg-accent-dark'} focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
                             >
                                 {isSubmitting ? 'Sending...' : 'Send Message'}
                             </button>

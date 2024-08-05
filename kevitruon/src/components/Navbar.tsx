@@ -52,7 +52,7 @@ const Navbar: React.FC = () => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
-              <a href="#Home" className={`text-2xl font-bold ${isScrolled ? (theme === 'dark' ? 'text-white' : 'text-primary') : 'text-white'}`}>KeviTruon</a>
+              <a key="Home" href="#Home" className={`text-2xl font-bold ${isScrolled ? (theme === 'dark' ? 'text-white' : 'text-primary') : 'text-white'}`} onClick={(event) => handleClick(event, "Home")}>KeviTruon</a>
             </div>
             <div className="hidden md:flex items-center space-x-4">
               <div className="flex items-baseline space-x-4">

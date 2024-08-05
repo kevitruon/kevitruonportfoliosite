@@ -5,7 +5,7 @@ const Hero: React.FC = () => {
     const { theme } = useTheme();
 
     return (
-        <div className={`hero min-h-screen flex items-center ${theme === 'dark' ? 'bg-gray-800 text-white' : 'bg-gradient-to-r from-primary to-secondary text-white'}`} id="Hero">
+        <div className={`hero min-h-screen flex items-center ${theme === 'dark' ? 'bg-gray-800 text-white' : 'bg-gradient-to-r from-primary to-secondary text-white'}`} id="Home">
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-col md:flex-row items-center justify-between">
                     <div className="md:w-1/2 mb-8 md:mb-0">
