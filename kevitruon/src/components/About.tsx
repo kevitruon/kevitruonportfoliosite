@@ -128,7 +128,7 @@ const About: React.FC = () => {
         </div>
         <div className="text-center mt-12">
           <a
-            href="https://drive.google.com/file/d/1-kiYY_WBp1SK2hUQVyWQyjRBb-w0W1Zd/view?usp=sharing"
+            href="https://drive.google.com/file/d/1QRO1wlbH7bksqrQdlGolohtV0XUO5Q2e/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className={`inline-block ${
