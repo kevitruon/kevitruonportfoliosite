@@ -28,6 +28,19 @@ const Portfolio: React.FC = () => {
 
   const projects = [
     {
+      title: "Flashcard-SaaS - Flashcard Web Application",
+      description:
+        "A flashcard web application built with React, Next.js, GeminiAI, Clerk, and Stripe.",
+      image: require("../assets/flashcard.png"),
+      repoLink: "https://github.com/KJBRHeadstarter/flashcard-saas",
+    },
+    {
+      title: "Pantry Manager AI",
+      description: "A pantry manager application that uses AI to suggest recipes based on the ingredients you have.",
+      image: require("../assets/pantry.png"),
+      repoLink: "https://github.com/kevitruon/Pantry-Tracker",
+    },
+    {
       title: "FitConnect - Social Media Workout Tracker",
       description:
         "A social media workout tracker built with React, FastAPI, and PostgreSQL.",
