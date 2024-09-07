@@ -1,10 +1,11 @@
 {
   "files": {
     "main.css": "/kevitruonportfoliosite/static/css/main.e37593b4.css",
-    "main.js": "/kevitruonportfoliosite/static/js/main.abbde2cb.js",
+    "main.js": "/kevitruonportfoliosite/static/js/main.a94eefc6.js",
     "static/media/computergraphics.png": "/kevitruonportfoliosite/static/media/computergraphics.074fe49ce0460a901c01.png",
     "static/media/carcardealership.png": "/kevitruonportfoliosite/static/media/carcardealership.24f348124bbf54223a1f.png",
     "static/media/flashcard.png": "/kevitruonportfoliosite/static/media/flashcard.1395dd1b6a612ec2d9f2.png",
+    "static/media/examforge.png": "/kevitruonportfoliosite/static/media/examforge.46e0e940a638753f8bac.png",
     "static/media/profilepicture.jpeg": "/kevitruonportfoliosite/static/media/profilepicture.ce95ef688516fe771ff5.jpeg",
     "static/media/fitconnect.png": "/kevitruonportfoliosite/static/media/fitconnect.9d418df9876e4a761ba8.png",
     "static/media/pantry.png": "/kevitruonportfoliosite/static/media/pantry.fd4f2c20272d8ecf96a8.png",
@@ -14,10 +15,10 @@
     "static/media/slick.woff": "/kevitruonportfoliosite/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/kevitruonportfoliosite/index.html",
     "main.e37593b4.css.map": "/kevitruonportfoliosite/static/css/main.e37593b4.css.map",
-    "main.abbde2cb.js.map": "/kevitruonportfoliosite/static/js/main.abbde2cb.js.map"
+    "main.a94eefc6.js.map": "/kevitruonportfoliosite/static/js/main.a94eefc6.js.map"
   },
   "entrypoints": [
     "static/css/main.e37593b4.css",
-    "static/js/main.abbde2cb.js"
+    "static/js/main.a94eefc6.js"
   ]
 }
