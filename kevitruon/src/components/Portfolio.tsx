@@ -28,6 +28,13 @@ const Portfolio: React.FC = () => {
 
   const projects = [
     {
+      title: "ExamForge - AI Exam/Flashcard Generator",
+      description:
+        "An AI-powered exam and flashcard generator built with React, Next.js, GeminiAI, Clerk, and Stripe.",
+      image: require("../assets/examforge.png"),
+      repoLink: "https://exam-forge.vercel.app/",
+    },
+    {
       title: "Flashcard-SaaS - Flashcard Web Application",
       description:
         "A flashcard web application built with React, Next.js, GeminiAI, Clerk, and Stripe.",
