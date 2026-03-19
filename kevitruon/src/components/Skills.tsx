@@ -111,30 +111,151 @@ const Skills: React.FC = () => {
         },
     ];
 
+    const isDark = theme === 'dark';
+
+    const sectionBg = isDark ? '#111827' : '#ffffff';
+    const cardBg = isDark ? 'rgba(31,41,55,0.8)' : 'rgba(248,250,252,0.9)';
+    const cardBorder = isDark ? 'rgba(99,102,241,0.15)' : 'rgba(99,102,241,0.12)';
+    const nameColor = isDark ? '#E5E7EB' : '#1F2937';
+
     return (
-        <div className={`py-20 ${theme === 'dark' ? 'bg-gray-800' : 'bg-background'}`} id="Skills">
-            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 className={`text-3xl font-bold text-center mb-12 ${theme === 'dark' ? 'text-white' : 'text-primary'}`}>Skills</h2>
+        <div
+            id="Skills"
+            style={{
+                background: sectionBg,
+                padding: '5rem 0',
+                position: 'relative',
+                overflow: 'hidden',
+            }}
+        >
+            {/* Background accent */}
+            <div style={{
+                position: 'absolute', inset: 0, pointerEvents: 'none',
+                backgroundImage: isDark
+                    ? 'radial-gradient(at 20% 50%, rgba(99,102,241,0.06) 0, transparent 50%), radial-gradient(at 80% 20%, rgba(139,92,246,0.05) 0, transparent 50%)'
+                    : 'radial-gradient(at 20% 50%, rgba(99,102,241,0.04) 0, transparent 50%)',
+            }} />
+
+            <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                {/* Header */}
+                <div className="text-center mb-12">
+                    <span
+                        className="text-sm font-semibold tracking-widest uppercase mb-3 block"
+                        style={{ color: '#6366F1' }}
+                    >
+                        Tech Stack
+                    </span>
+                    <h2
+                        className="text-4xl md:text-5xl font-extrabold mb-4"
+                        style={{ color: isDark ? '#F9FAFB' : '#111827' }}
+                    >
+                        My{' '}
+                        <span style={{
+                            background: 'linear-gradient(135deg, #6366F1, #A78BFA)',
+                            WebkitBackgroundClip: 'text',
+                            WebkitTextFillColor: 'transparent',
+                            backgroundClip: 'text',
+                        }}>
+                            Skills
+                        </span>
+                    </h2>
+                    <p style={{ color: isDark ? 'rgba(255,255,255,0.5)' : '#6B7280', maxWidth: 400, margin: '0 auto' }}>
+                        Technologies I use to build scalable, modern applications.
+                    </p>
+                    <div style={{ height: 1, background: 'linear-gradient(90deg, transparent, rgba(99,102,241,0.3), transparent)', marginTop: '2rem' }} />
+                </div>
+
+                {/* Skills grid */}
                 <div
                     ref={skillsRef}
-                    className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8 overflow-hidden transition-all duration-500 ease-in-out"
-                    style={{ maxHeight: "384px" }}
+                    className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 overflow-hidden transition-all duration-500 ease-in-out"
+                    style={{ maxHeight: '384px' }}
                 >
                     {skills.map((skill, index) => (
-                        <div key={index} className={`flex flex-col items-center ${theme === 'dark' ? 'bg-gray-700' : 'bg-white'} rounded-lg p-6 transform hover:scale-105 transition duration-300`}>
-                            <div className={`w-16 h-16 mb-4 ${theme === 'dark' ? 'text-primary' : 'text-primary'} skill-icon`}>
+                        <div
+                            key={index}
+                            style={{
+                                display: 'flex',
+                                flexDirection: 'column',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                background: cardBg,
+                                border: '1px solid ' + cardBorder,
+                                borderRadius: '1rem',
+                                padding: '1.25rem 0.75rem',
+                                backdropFilter: 'blur(8px)',
+                                WebkitBackdropFilter: 'blur(8px)',
+                                transition: 'all 0.3s ease',
+                                cursor: 'default',
+                                gap: '0.625rem',
+                            }}
+                            onMouseEnter={e => {
+                                const el = e.currentTarget as HTMLElement;
+                                el.style.transform = 'translateY(-6px) scale(1.03)';
+                                el.style.borderColor = 'rgba(99,102,241,0.4)';
+                                el.style.boxShadow = '0 12px 30px rgba(99,102,241,0.15)';
+                                el.style.background = isDark ? 'rgba(99,102,241,0.12)' : 'rgba(99,102,241,0.06)';
+                            }}
+                            onMouseLeave={e => {
+                                const el = e.currentTarget as HTMLElement;
+                                el.style.transform = '';
+                                el.style.borderColor = cardBorder;
+                                el.style.boxShadow = '';
+                                el.style.background = cardBg;
+                            }}
+                        >
+                            <div style={{ width: 44, height: 44 }}>
                                 {skill.icon}
                             </div>
-                            <span className={`text-lg font-medium ${theme === 'dark' ? 'text-white' : 'text-text'}`}>{skill.name}</span>
+                            <span
+                                className="text-xs font-semibold text-center leading-tight"
+                                style={{ color: nameColor }}
+                            >
+                                {skill.name}
+                            </span>
                         </div>
                     ))}
                 </div>
-                <div className="text-center mt-12">
+
+                {/* Toggle button */}
+                <div className="text-center mt-10">
                     <button
                         onClick={toggleSkills}
-                        className={`${theme === 'dark' ? 'bg-primary text-white' : 'bg-accent text-white'} font-semibold py-2 px-6 rounded-full hover:bg-opacity-80 transition duration-300`}
+                        style={{
+                            background: 'linear-gradient(135deg, #6366F1, #8B5CF6)',
+                            color: 'white',
+                            fontWeight: 600,
+                            fontSize: '0.875rem',
+                            padding: '0.625rem 2rem',
+                            borderRadius: '9999px',
+                            border: 'none',
+                            cursor: 'pointer',
+                            boxShadow: '0 4px 15px rgba(99,102,241,0.35)',
+                            transition: 'all 0.3s ease',
+                            display: 'inline-flex',
+                            alignItems: 'center',
+                            gap: '0.5rem',
+                        }}
+                        onMouseEnter={e => {
+                            (e.currentTarget as HTMLElement).style.transform = 'translateY(-2px)';
+                            (e.currentTarget as HTMLElement).style.boxShadow = '0 8px 25px rgba(99,102,241,0.5)';
+                        }}
+                        onMouseLeave={e => {
+                            (e.currentTarget as HTMLElement).style.transform = '';
+                            (e.currentTarget as HTMLElement).style.boxShadow = '0 4px 15px rgba(99,102,241,0.35)';
+                        }}
                     >
-                        {showAll ? "View Less" : "View More"}
+                        {showAll ? (
+                            <>
+                                <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M5 15l7-7 7 7"/></svg>
+                                View Less
+                            </>
+                        ) : (
+                            <>
+                                <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                                View All Skills
+                            </>
+                        )}
                     </button>
                 </div>
             </div>
