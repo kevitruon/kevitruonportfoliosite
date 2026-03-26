@@ -67,32 +67,23 @@ const Skills = () => {
 
 
 
-      <div className="mt-16 relative">
-        {/* Floating orbs for visual interest */}
-        <div className="absolute -inset-16 orb bg-purple-500"></div>
-        <div className="absolute -inset-12 orb bg-pink-500"></div>
-        <div className="absolute -inset-20 orb bg-blue-500"></div>
-
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6">
-          {skills.slice(0, showAll ? skills.length : 6).map((skill, index) => (
+      <div className="mt-8 relative">
+        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 xl:grid-cols-5 gap-3">
+          {skills.slice(0, showAll ? skills.length : 10).map((skill, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: index * 0.05 }}
-
-              className="glass-card border rounded-xl p-5 shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-1 hover:scale-105"
+              className="glass-card border rounded-lg p-3 shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-1 hover:scale-105"
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
             >
-
-
-
               <div className="flex flex-col items-center justify-center h-full">
-                <div className="text-5xl mb-3 transform hover:rotate-12 transition-transform">
+                <div className="text-3xl mb-2 transform hover:rotate-12 transition-transform">
                   {skill.icon}
                 </div>
-                <span className="text-sm font-medium text-gray-800 dark:text-gray-200 text-center">
+                <span className="text-xs font-medium text-gray-800 dark:text-gray-200 text-center">
                   {skill.name}
                 </span>
               </div>
