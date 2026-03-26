@@ -9,7 +9,7 @@ const NextArrow = ({ onClick }: { onClick?: () => void }) => (
     onClick={onClick}
     style={{
       position: 'absolute',
-      right: -16,
+      right: -48,
       top: '50%',
       transform: 'translateY(-50%)',
       zIndex: 10,
@@ -40,7 +40,7 @@ const PrevArrow = ({ onClick }: { onClick?: () => void }) => (
     onClick={onClick}
     style={{
       position: 'absolute',
-      left: -16,
+      left: -48,
       top: '50%',
       transform: 'translateY(-50%)',
       zIndex: 10,
@@ -197,10 +197,10 @@ const Portfolio: React.FC = () => {
         </div>
 
         {/* Slider */}
-        <div style={{ position: 'relative', padding: '0 1.5rem' }}>
+        <div style={{ position: 'relative', padding: '0 3rem' }}>
           <Slider {...settings}>
             {projects.map((project, index) => (
-              <div key={index} style={{ padding: '0 0.75rem' }}>
+              <div key={index} style={{ padding: '0 1rem' }}>
                 <div
                   style={{
                     background: isDark ? 'rgba(17,24,39,0.9)' : 'rgba(255,255,255,0.95)',
