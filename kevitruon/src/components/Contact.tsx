@@ -16,10 +16,10 @@ const Contact: React.FC = () => {
         setIsSubmitting(true);
         try {
             await emailjs.sendForm(
-                process.env.REACT_APP_EMAILJS_SERVICE_ID!,
-                process.env.REACT_APP_EMAILJS_TEMPLATE_ID!,
+                import.meta.env.VITE_EMAILJS_SERVICE_ID,
+                import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
                 e.target as HTMLFormElement,
-                process.env.REACT_APP_EMAILJS_USER_ID!
+                import.meta.env.VITE_EMAILJS_USER_ID
             );
             setSubmitStatus('success');
             setName('');

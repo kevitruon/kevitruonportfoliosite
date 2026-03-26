@@ -1,5 +1,11 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
+import imgExamforge from '../assets/examforge.png';
+import imgFlashcard from '../assets/flashcard.png';
+import imgPantry from '../assets/pantry.png';
+import imgFitconnect from '../assets/fitconnect.png';
+import imgCarcar from '../assets/carcardealership.png';
+import imgGraphics from '../assets/computergraphics.png';
 
 interface Project {
   title: string;
@@ -15,7 +21,7 @@ const projects: Project[] = [
   {
     title: 'ExamForge',
     description: 'AI-powered exam and flashcard generator. Users can create personalized study materials from any topic using Gemini AI.',
-    image: require('../assets/examforge.png'),
+    image: imgExamforge,
     repoLink: 'https://exam-forge.vercel.app/',
     tags: ['React', 'Next.js', 'Gemini AI', 'Stripe', 'Clerk'],
     badge: 'Live',
@@ -24,7 +30,7 @@ const projects: Project[] = [
   {
     title: 'Flashcard SaaS',
     description: 'Full-stack SaaS flashcard application with AI-generated content, user auth, and subscription billing.',
-    image: require('../assets/flashcard.png'),
+    image: imgFlashcard,
     repoLink: 'https://github.com/KJBRHeadstarter/flashcard-saas',
     tags: ['Next.js', 'Gemini AI', 'Clerk', 'Stripe', 'Firebase'],
     badge: 'SaaS',
@@ -33,7 +39,7 @@ const projects: Project[] = [
   {
     title: 'Pantry Manager AI',
     description: 'Smart pantry tracker that uses AI to suggest recipes based on ingredients you have on hand.',
-    image: require('../assets/pantry.png'),
+    image: imgPantry,
     repoLink: 'https://github.com/kevitruon/Pantry-Tracker',
     tags: ['React', 'Next.js', 'OpenAI', 'Firebase'],
     badge: 'AI',
@@ -42,21 +48,21 @@ const projects: Project[] = [
   {
     title: 'FitConnect',
     description: 'Social media workout tracker for athletes. Log workouts, follow friends, and track fitness progress.',
-    image: require('../assets/fitconnect.png'),
+    image: imgFitconnect,
     repoLink: 'https://github.com/kevitruon/FitConnect',
     tags: ['React', 'FastAPI', 'PostgreSQL', 'Docker'],
   },
   {
     title: 'CarCar Dealer',
     description: 'Full-featured car dealership management app with inventory, sales, and service appointment tracking.',
-    image: require('../assets/carcardealership.png'),
+    image: imgCarcar,
     repoLink: 'https://github.com/kevitruon/CarCarDealership',
     tags: ['React', 'Django', 'PostgreSQL', 'REST API'],
   },
   {
     title: 'Computer Graphics',
     description: '3D model renderer using Three.js and WebGL. Demonstrates shader programming and real-time 3D rendering.',
-    image: require('../assets/computergraphics.png'),
+    image: imgGraphics,
     repoLink: 'https://github.com/kevitruon/ComputerGraphics-WebGL',
     tags: ['Three.js', 'WebGL', 'GLSL', 'HTML5'],
   },

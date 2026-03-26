@@ -1,5 +1,6 @@
 import React from "react";
 import { useTheme } from '../ThemeContext';
+import profilePicture from '../assets/profilepicture.jpeg';
 
 const Hero: React.FC = () => {
   const { theme } = useTheme();
@@ -250,7 +251,7 @@ const Hero: React.FC = () => {
                 }}
               >
                 <img
-                  src={require("../assets/profilepicture.jpeg")}
+                  src={profilePicture}
                   alt="Kevin Truong"
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />
