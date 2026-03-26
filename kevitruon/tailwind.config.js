@@ -13,6 +13,7 @@ module.exports = {
         surface: '#111827',
         'surface-2': '#1F2937',
         text: '#F9FAFB',
+        'text-muted': '#9CA3AF',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
